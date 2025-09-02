@@ -4,7 +4,26 @@
 Collaborative project by **Achref Soua** and **[Khalil Braham](https://github.com/khalilbraham)**, focusing on both **graph classification** and **molecular graph generation**.
 
 ---
+## Project Description
 
+This project explores **graph machine learning** for two fundamental challenges: **graph classification** and **molecular graph generation**.  
+
+- **Graph Classification** was studied on both **graph-level (PROTEINS dataset)** and **node-level (CORA dataset)** tasks.  
+  We benchmarked **Graph Convolutional Networks (GCN)**, **Graph Attention Networks (GAT)**, and their **ensembles**, while systematically testing a range of **graph augmentation strategies** (feature noise, dropout, edge perturbations, node dropping, random walks, k-hop subgraphs).  
+  Results show that augmentations and ensembles enhance robustness, with **GCN+GAT ensembles achieving the best overall performance** across both binary and multiclass tasks.
+
+- **Molecular Graph Generation** was performed on the **ZINC dataset** using multiple generative paradigms: **GraphGAN, GraphVAE, DiGress-lite (diffusion-based), and GraphRNN**.  
+  We evaluated generated molecules with **validity, novelty, and diversity metrics**, highlighting the trade-offs between models:  
+  - **GraphVAE** and **GraphRNN** excel in **validity and novelty (100%)**.  
+  - **DiGress-lite** achieves the **highest diversity (~78%)**, best matching real molecular properties.  
+  - **GraphGAN** generates realistic fragments but struggles with consistency.  
+
+  Together, these findings suggest **diffusion or VAE for exploration** and **GraphRNN for guaranteed validity**, making them complementary approaches.
+
+This project delivers a **comprehensive comparative study** that bridges **classification** and **generation** in graph learning, with practical insights for bioinformatics and cheminformatics applications.  
+A detailed **15-page report** is included, covering methodology, experiments, ablations, and discussions.
+
+---
 ##  Project Highlights
 
 ###  Part 1: Graph Classification
